@@ -1,3 +1,5 @@
+package engine;
+
 import org.lwjgl.system.MemoryStack;
 
 import java.io.BufferedReader;
@@ -15,7 +17,7 @@ public class Shader implements Destroyable {
     public Shader(String vertexPath, String fragmentPath) {
         programID = glCreateProgram();
 
-        // Vertex Shader
+        // Vertex engine.Shader
         vertexID = glCreateShader(GL_VERTEX_SHADER);
         String vertexSource = readShaderSource(vertexPath);
         // Read the source file into the source string
@@ -31,7 +33,7 @@ public class Shader implements Destroyable {
         }
 
 
-        // Fragment Shader
+        // Fragment engine.Shader
         fragmentID = glCreateShader(GL_FRAGMENT_SHADER);
         String fragmentSource = readShaderSource(fragmentPath);
         // Read the source file into the source string

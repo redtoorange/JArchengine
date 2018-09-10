@@ -1,3 +1,5 @@
+package engine;
+
 import org.joml.Vector2i;
 import org.lwjgl.system.MemoryStack;
 
@@ -19,7 +21,7 @@ public class Window implements Destroyable {
     }
 
     /**
-     * Hide the Window.
+     * Hide the engine.Window.
      */
     public void close() {
         glfwHideWindow(nativeWindow);

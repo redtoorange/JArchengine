@@ -1,3 +1,5 @@
+package engine;
+
 import java.util.ArrayList;
 
 public class WindowSystem implements Destroyable {
@@ -9,17 +11,17 @@ public class WindowSystem implements Destroyable {
         if (S == null) {
             S = this;
         } else {
-            throw new RuntimeException("WindowSystem has already been started.");
+            throw new RuntimeException("engine.WindowSystem has already been started.");
         }
     }
 
     /**
-     * Create a new Window that will be managed by the WindowSystem.
+     * Create a new engine.Window that will be managed by the engine.WindowSystem.
      *
      * @param title        title of the window
      * @param windowWidth  width of the window
      * @param windowHeight height of the window
-     * @return Managed Window.
+     * @return Managed engine.Window.
      */
     public Window createWindow(String title, int windowWidth, int windowHeight) {
         Window window = new Window(title, windowWidth, windowHeight);

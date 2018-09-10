@@ -1,7 +1,5 @@
+import engine.*;
 import org.lwjgl.opengl.GL;
-import org.lwjgl.system.MemoryStack;
-
-import java.nio.IntBuffer;
 
 import static org.lwjgl.opengl.GL33.*;
 import static org.lwjgl.glfw.GLFW.*;
@@ -30,7 +28,7 @@ public class Main {
         glfwInit();
 
         Engine engine = new Engine();
-        Window window = WindowSystem.S.createWindow("Debug Window", 800, 600);
+        Window window = WindowSystem.S.createWindow("Debug engine.Window", 800, 600);
         GL.createCapabilities();
 
         Shader shader = new Shader("basic.vert", "basic.frag");

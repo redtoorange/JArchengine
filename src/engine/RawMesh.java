@@ -1,3 +1,5 @@
+package engine;
+
 import org.lwjgl.system.MemoryStack;
 
 import static org.lwjgl.opengl.GL33.*;
@@ -16,7 +18,7 @@ public class RawMesh implements Destroyable {
     private int normalVBO;
 
     public RawMesh(int[] elementData, float[] vertexData, float[] uvData) {
-        try(MemoryStack stack = MemoryStack.stackPush()){
+        try (MemoryStack stack = MemoryStack.stackPush()) {
             // Generate Buffers
             IntBuffer iBuffer = stack.mallocInt(1);
             glGenVertexArrays(iBuffer);
