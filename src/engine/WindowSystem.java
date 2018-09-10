@@ -6,6 +6,7 @@ public class WindowSystem implements Destroyable {
     public static WindowSystem S = null;
 
     private ArrayList<Window> windows = new ArrayList<Window>();
+    private Window currentWindow;
 
     public WindowSystem() {
         if (S == null) {
@@ -24,9 +25,14 @@ public class WindowSystem implements Destroyable {
      * @return Managed engine.Window.
      */
     public Window createWindow(String title, int windowWidth, int windowHeight) {
-        Window window = new Window(title, windowWidth, windowHeight);
-        windows.add(window);
-        return window;
+//        Window window = new Window(title, windowWidth, windowHeight);
+//        windows.add(window);
+        currentWindow = new Window(title, windowWidth, windowHeight);
+        return currentWindow;
+    }
+
+    public Window getCurrentWindow(){
+        return currentWindow;
     }
 
     @Override

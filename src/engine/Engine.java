@@ -1,5 +1,7 @@
 package engine;
 
+import engine.input.InputSystem;
+
 public class Engine implements Destroyable {
     private RenderSystem renderSystem;
     private WindowSystem windowSystem;
@@ -12,7 +14,7 @@ public class Engine implements Destroyable {
     public Engine() {
         renderSystem = new RenderSystem();
         windowSystem = new WindowSystem();
-        inputSystem = new InputSystem();
+        inputSystem = new InputSystem( );
         textureManager = new TextureManager();
     }
 

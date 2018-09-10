@@ -29,6 +29,7 @@ public class Main {
 
         Engine engine = new Engine();
         Window window = WindowSystem.S.createWindow("Debug engine.Window", 800, 600);
+        window.setInputSource();
         GL.createCapabilities();
 
         Shader shader = new Shader("basic.vert", "basic.frag");

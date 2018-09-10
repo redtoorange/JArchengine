@@ -1,5 +1,6 @@
 package engine;
 
+import engine.input.InputSystem;
 import org.joml.Vector2i;
 import org.lwjgl.system.MemoryStack;
 
@@ -73,5 +74,13 @@ public class Window implements Destroyable {
             size.set(pWidth.get(), pHeight.get());
         }
         return size;
+    }
+
+    public long getNativeWindow(){
+        return nativeWindow;
+    }
+
+    public void setInputSource(){
+        InputSystem.S.setInputSource(this);
     }
 }
