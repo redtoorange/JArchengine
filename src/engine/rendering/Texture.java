@@ -1,5 +1,6 @@
-package engine;
+package engine.rendering;
 
+import engine.Destroyable;
 import org.lwjgl.stb.STBImage;
 import org.lwjgl.system.MemoryStack;
 

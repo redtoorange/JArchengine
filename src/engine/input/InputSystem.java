@@ -20,6 +20,12 @@ public class InputSystem implements Destroyable {
         inputListeners = new ArrayList<InputListener>();
     }
 
+    public void update(){
+        glfwPollEvents();
+
+        // TODO add frame input code
+    }
+
     public void removeListener(InputListener listener) {
         inputListeners.remove(listener);
     }

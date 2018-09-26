@@ -1,5 +1,6 @@
-package engine;
+package engine.rendering;
 
+import engine.Destroyable;
 import org.lwjgl.system.MemoryStack;
 
 import static org.lwjgl.opengl.GL33.*;
@@ -7,7 +8,7 @@ import static org.lwjgl.opengl.GL33.*;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 
-public class RawMesh implements Destroyable {
+public class Mesh implements Destroyable {
     private int VAO;
     private int vertexCount;
 
@@ -17,7 +18,7 @@ public class RawMesh implements Destroyable {
     private int uvVBO;
     private int normalVBO;
 
-    public RawMesh(int[] elementData, float[] vertexData, float[] uvData) {
+    public Mesh(int[] elementData, float[] vertexData, float[] uvData) {
         try (MemoryStack stack = MemoryStack.stackPush()) {
             // Generate Buffers
             IntBuffer iBuffer = stack.mallocInt(1);
@@ -65,19 +66,6 @@ public class RawMesh implements Destroyable {
             glVertexAttribPointer(1, 2, GL_FLOAT, false, 0, 0);
             glEnableVertexAttribArray(1);
         }
-//        VAO = generateVAO();
-//        glBindVertexArray(VAO);
-//
-//        indexVBO = generateVBO();
-//        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexVBO);
-//        loadElementArray(elementData);
-//        vertexCount = elementData.length;
-//
-//        vertexVBO = generateVBO();
-//        glBindBuffer(GL_ARRAY_BUFFER, vertexVBO);
-//        loadBufferData(vertexData, GL_ARRAY_BUFFER, GL_STATIC_DRAW, 0, 3);
-//
-//        glBindVertexArray(0);
     }
 
 

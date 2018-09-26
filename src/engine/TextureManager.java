@@ -1,5 +1,7 @@
 package engine;
 
+import engine.rendering.Texture;
+
 import java.util.HashMap;
 
 public class TextureManager implements Destroyable {
